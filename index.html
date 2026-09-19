@@ -55,103 +55,14 @@
   a { color: inherit; }
 
   ::selection { background: #E0972A; color: #FFFFFF; }
-
-  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
-    outline: 2px solid #C<!DOCTYPE html>
-<!--
-  =====================================================
-  OLD SITE -> NEW SITE REDIRECT
-  digihub403.github.io  ->  digihub-agency.github.io
-  =====================================================
-  YE FILE KAHAN DAALNI HAI:
-  - Apne PURANE GitHub repo mein jaayein (wo repo jisse
-    "digihub403.github.io" site banti hai)
-  - Us repo ke root mein "index.html" file ko is content
-    se REPLACE kar dein (agar already index.html hai, to
-    uska backup rakh kar isse overwrite karein)
-  - Commit + push karein
-
-  GitHub Pages khud isko publish kar dega, aur purani site
-  pe aane wale saare visitors turant naye domain pe chale
-  jayenge. Saath hi canonical tag se Google ko pata chal
-  jayega ki asli/naya page kaunsa hai (SEO value transfer
-  hoti hai, 301 jaisa hi effect).
-  =====================================================
--->
-<html lang="hi">
-<head>
-  <meta charset="UTF-8" />
-  <title>Redirecting to Digihub...</title>
-  <link rel="canonical" href="https://digihub-agency.github.io/" />
-  <meta http-equiv="refresh" content="0; url=https://digihub-agency.github.io/" />
-  <meta name="robots" content="noindex" />
-  <script>
-    window.location.replace("https://digihub-agency.github.io/");
-  </script>
-</head>
-<body>
-  <p>Ye site naye address pe move ho chuki hai. Agar redirect automatically
-     nahi hota, to <a href="https://digihub-agency.github.io/">yahan click karein</a>.</p>
-</body>
-</html>
-
-# Redirect: digihub403.github.io → digihub-agency.github.io
-
-## Steps (5 minute kaam)
-
-1. GitHub pe jaakar apna **purana repo** open karein — jisse
-   `digihub403.github.io` site banti hai (usually repo ka naam
-   `digihub403.github.io` hoga, ya jisme GitHub Pages `digihub403`
-   account pe enabled hai).
-
-2. Us repo ke **root folder** mein jaake `index.html` file dhundein.
-   - Agar already hai → usko edit karein (ya pehle download/backup kar lein)
-   - Agar nahi hai → nayi file banayein
-
-3. Is zip mein di gayi `index.html` ka pura content copy karke
-   apne repo waali `index.html` mein paste kar dein (poora replace
-   kar dein, purana content hata dein).
-
-4. Commit karein aur push karein:
-   ```
-   git add index.html
-   git commit -m "Redirect old site to digihub-agency.github.io"
-   git push
-   ```
-   (Ya GitHub website pe hi "Edit file" button se seedha paste
-   karke commit kar sakte hain — code download/terminal ki zaroorat nahi.)
-
-5. 1-2 minute wait karein (GitHub Pages rebuild hone mein time leta hai),
-   fir `https://digihub403.github.io/` open karke test karein — ye
-   turant `https://digihub-agency.github.io/` pe le jana chahiye.
-
-## Important note
-
-- Agar purane repo mein **aur bhi pages** hain (jaise `/about.html`,
-  `/services.html` etc.) jinhe log directly visit karte hain, un sabme
-  bhi yahi tarah ka redirect daalna padega (ya unhe bhi delete karke
-  sirf root `index.html` rakhein, jisse har URL 404 ke bajaye kam se
-  kam homepage pe to redirect ho jaye).
-
-- Agar aapne purane repo mein **custom domain (CNAME file)** set kar
-  rakha hai, use hata na dein jab tak zaroori na ho — warna GitHub Pages
-  build fail ho sakta hai.
-
-## SEO tip
-
-Ye method (`meta refresh` + `canonical` + JS redirect) Google/Bing ke
-liye 301 jaisa hi treat hota hai kyunki GitHub Pages static hosting
-hai aur real server-level 301 support nahi karta. Kuch hafton mein
-Google purane URL ki jagah naya URL index karna shuru kar dega.
-97F1E;
-    outline-offset: 2px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
+ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid #E0972A;
+  outline-offset: 2px;
+}
+   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
     html { scroll-behavior: auto; }
   }
-
   .num-counter { font-variant-numeric: tabular-nums; }
 
   #mobile-menu { transition: max-height 0.35s ease, opacity 0.25s ease; }
